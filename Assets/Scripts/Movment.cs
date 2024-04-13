@@ -14,8 +14,8 @@ public class Movment : MonoBehaviour
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private int jumpCount;
     private bool isMoving = false;
-
     private bool isLookingRight = true;
+
     private void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -36,16 +36,28 @@ public class Movment : MonoBehaviour
         animator.SetBool("isMoving", isMoving);
         animator.SetBool("isGrounded", isGrounded);
 
+
         bool jump = Input.GetButtonDown("Jump");
         if (jump)
         {
             if (isGrounded || jumpCount > 0)
             {
-                rigidBody.AddForce(new Vector2(0, jumpForce));
+                animator.SetTrigger("Jump");
+                rigidBody.velocity = new Vector2( rigidBody.velocity.x , jumpForce);
                 isGrounded = false;
                 jumpCount -= 1;
             }
         }
+        bool attack = Input.GetKeyDown(KeyCode.F);
+        if (attack) 
+        {
+            animator.SetTrigger("Attack");
+        }
+    }
+
+    public void Attack()
+    {
+        Debug.Log("Attack");
     }
 
     void FixedUpdate()

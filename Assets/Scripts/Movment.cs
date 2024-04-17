@@ -15,12 +15,14 @@ public class Movment : MonoBehaviour
     [SerializeField] private int jumpCount;
     private bool isMoving = false;
     private bool isLookingRight = true;
+    private float horizontal = 0;
 
     private void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        rigidBody.velocity = new Vector2(horizontal * movementSpeed * Time.deltaTime, rigidBody.velocity.y);
-        
+
+        horizontal = Input.GetAxis("Horizontal");
+       
+
         isMoving = horizontal != 0.0f;
         if(horizontal > 0 && !isLookingRight || horizontal < 0 && isLookingRight)
         {
@@ -62,6 +64,8 @@ public class Movment : MonoBehaviour
 
     void FixedUpdate()
     {
+        rigidBody.velocity = new Vector2(horizontal * movementSpeed * Time.deltaTime, rigidBody.velocity.y);
+
         Collider2D[] overlapResults = Physics2D.OverlapCircleAll(transform.position + Vector3.down * castDistance, radius);
         isGrounded = false;
 

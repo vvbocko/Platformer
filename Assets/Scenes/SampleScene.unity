@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &19776501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6758101006321203093, guid: 4e79da7cd0e3f244aa98df9e77d323cd, type: 3}
+  m_PrefabInstance: {fileID: 6542425891034006972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de8470945cebe14d867b0f616bb583d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &125767764
 GameObject:
   m_ObjectHideFlags: 3
@@ -8653,6 +8664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
+    - target: {fileID: 4884859044352909915, guid: 4e79da7cd0e3f244aa98df9e77d323cd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f0529f1fb983fb84dbe45385b27728d8, type: 2}
     - target: {fileID: 5063012540845938949, guid: 4e79da7cd0e3f244aa98df9e77d323cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.91
@@ -8754,6 +8769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1746732888171770356, guid: 60dc03b1b26537d49addaa7b5ee0df37, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 19776501}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

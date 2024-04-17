@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6369847395478176540}
   - component: {fileID: 293957172488464139}
   - component: {fileID: 7044856750129841839}
-  - component: {fileID: 7962973274913565825}
+  - component: {fileID: 6758101006321203093}
   - component: {fileID: 4884859044352909915}
   m_Layer: 0
   m_Name: Goblin
@@ -163,10 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de59a2cfba21bc546add174567898fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   speed: 150
   rb: {fileID: 6369847395478176540}
---- !u!114 &7962973274913565825
+--- !u!114 &6758101006321203093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,7 +174,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1395703809332044866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5090e0f69e3bf0a43879052cbe63eda6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8de8470945cebe14d867b0f616bb583d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
@@ -190,7 +189,7 @@ Animator:
   m_GameObject: {fileID: 1395703809332044866}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3403e05d52fdf6d4f8103764fa673a81, type: 2}
+  m_Controller: {fileID: 9100000, guid: f0529f1fb983fb84dbe45385b27728d8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
